@@ -1,128 +1,398 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import * as React from 'react'
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
+const IndexPage = () => {
+  return (
+    <header className="site-header-wrapper">
+      <header className="site-header">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="header-in">
+                <div className="site-logo">
+                  <h1><a href="index.html"><img src="images/logo.png" alt="Logo" /></a></h1>
+                  <span className="site-tagline">Buying or Selling,<br />just got easier!</span>
+                </div>
 
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-  },
-  {
-    text: "Examples",
-    url: "https://github.com/gatsbyjs/gatsby/tree/master/examples",
-    description:
-      "A collection of websites ranging from very basic to complex/complete that illustrate how to accomplish specific tasks within your Gatsby sites.",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Learn how to add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-  },
-]
+                <div className="header-right">
+                  <div className="user-login-panel">
+                    <a href="#" className="user-login-btn" data-bs-toggle="modal" data-bs-target="#loginModal"><i className="icon-profile"></i></a>
+                  </div>
+                  <div className="topnav dd-menu">
+                    <ul className="top-navigation sf-menu">
+                      <li><a href="results-list.html">Buy</a></li>
+                      <li><a href="add-listing-pricing.html">Sell</a></li>
+                      <li><a href="joinus.html">Join</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
 
-const samplePageLinks = [
-  {
-    text: "Page 2",
-    url: "page-2",
-    badge: false,
-    description:
-      "A simple example of linking to another page within a Gatsby site",
-  },
-  { text: "TypeScript", url: "using-typescript" },
-  { text: "Server Side Rendering", url: "using-ssr" },
-  { text: "Deferred Static Generation", url: "using-dsg" },
-]
+      <nav className="navbar">
+        <div className="container">
+          <div className="col-12">
+            <div className="display-flex nav-in">
+              <div className="search-function">
+                <a href="#" className="search-trigger"><i className="fas fa-search"></i></a>
+                <span><i className="fas fa-phone"></i> Call us <strong>1800 011 2211</strong> <em>or</em> search</span>
+              </div>
+              <a href="#" className="visible-sm visible-xs" id="menu-toggle"><i className="fas fa-bars"></i></a>
 
-const moreLinks = [
-  { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
-  {
-    text: "Documentation",
-    url: "https://gatsbyjs.com/docs/",
-  },
-  {
-    text: "Starters",
-    url: "https://gatsbyjs.com/starters/",
-  },
-  {
-    text: "Showcase",
-    url: "https://gatsbyjs.com/showcase/",
-  },
-  {
-    text: "Contributing",
-    url: "https://www.gatsbyjs.com/contributing/",
-  },
-  { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
-]
+              <nav className="main-navigation dd-menu toggle-menu" role="navigation">
+                <ul className="sf-menu">
+                  <li><a href="">Home</a>
+                    <ul className="dropdown">
+                      <li><a href="">Home versions</a>
+                        <ul className="dropdown">
+                          <li><a href="index.html">Default</a></li>
+                          <li><a href="index2.html">Version 2</a></li>
+                          <li><a href="index3.html">Version 3</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="">Slider versions</a>
+                        <ul className="dropdown">
+                          <li><a href="index.html">Default(Flexslider)</a></li>
+                          <li><a href="index-revslider.html">Slider Revolution <span className="label label-danger">New</span></a></li>
+                          <li><a href="hero-carousel.html">Full Width Carousel</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="">Search Form Positions</a>
+                        <ul className="dropdown">
+                          <li><a href="index.html">Default(With Main Menu)</a></li>
+                          <li><a href="search-below-slider.html">Below Slider</a></li>
+                          <li><a href="search-over-slider.html">Over Slider</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="">Header versions</a>
+                        <ul className="dropdown">
+                          <li><a href="index.html">Default</a></li>
+                          <li><a href="header-v2.html">Version 2</a></li>
+                          <li><a href="header-v3.html">Version 3</a></li>
+                          <li><a href="header-v4.html">Version 4</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a href="">Pages</a>
+                    <ul className="dropdown">
+                      <li><a href="about.html">About Us</a></li>
+                      <li><a href="contact.html">Contact Us</a></li>
+                      <li><a href="joinus.html">Signup</a></li>
+                      <li><a href="404.html">404 Error Page</a></li>
+                      <li><a href="add-listing-pricing.html">Pricing</a></li>
+                      <li><a href="shortcodes.html">Shortcodes</a></li>
+                      <li><a href="typography.html">Typography</a></li>
+                      <li><a href="dealers-search.html">Dealer Search</a></li>
+                      <li><a href="dealers-search-results.html">Dealer Search Results</a></li>
+                    </ul>
+                  </li>
+                  <li className="megamenu"><a href="index.html">Mega Menu</a>
+                    <ul className="dropdown">
+                      <li>
+                        <div className="megamenu-container container">
+                          <div className="row">
+                            <div className="mm-col col-md-2">
+                              <ul className="sub-menu">
+                                <li><a href="results-list.html">Brand new cars</a></li>
+                                <li><a href="results-list.html">Used cars</a></li>
+                                <li><a href="results-list.html">Latest reviews</a></li>
+                                <li><a href="blog.html">Auto news</a></li>
+                                <li><a href="about.html">Car insurance</a></li>
+                              </ul>
+                            </div>
+                            <div className="mm-col col-md-5">
+                              <span className="megamenu-sub-title">Browse by body type</span>
+                              <ul className="body-type-widget">
+                                <li> <a href="results-list.html"><img src="images/body-types/wagon.png" alt="" /> <span>Wagon</span></a></li>
+                                <li> <a href="results-list.html"><img src="images/body-types/minivan.png" alt="" /> <span>Minivan</span></a></li>
+                                <li> <a href="results-list.html"><img src="images/body-types/coupe.png" alt="" /> <span>Coupe</span></a></li>
+                                <li> <a href="results-list.html"><img src="images/body-types/convertible.png" alt="" /> <span>Convertible</span></a></li>
+                                <li> <a href="results-list.html"><img src="images/body-types/crossover.png" alt="" /> <span>Crossover</span></a></li>
+                                <li> <a href="results-list.html"><img src="images/body-types/suv.png" alt="" /> <span>SUV</span></a></li>
+                              </ul>
+                              <a href="results-list.html" className="basic-link">view all</a>
+                            </div>
+                            <div className="mm-col col-md-5">
+                              <span className="megamenu-sub-title">Browse by make</span>
+                              <ul className="make-widget">
+                                <li className="item"> <a href="results-list.html"><img src="https://via.placeholder.com/100x100?text=IMAGE+PLACEHOLDER" alt="" /></a></li>
+                                <li className="item"> <a href="results-list.html"><img src="https://via.placeholder.com/100x100?text=IMAGE+PLACEHOLDER" alt="" /></a></li>
+                                <li className="item"> <a href="results-list.html"><img src="https://via.placeholder.com/100x100?text=IMAGE+PLACEHOLDER" alt="" /></a></li>
+                                <li className="item"> <a href="results-list.html"><img src="https://via.placeholder.com/100x100?text=IMAGE+PLACEHOLDER" alt="" /></a></li>
+                                <li className="item"> <a href="results-list.html"><img src="https://via.placeholder.com/100x100?text=IMAGE+PLACEHOLDER" alt="" /></a></li>
+                                <li className="item"> <a href="results-list.html"><img src="https://via.placeholder.com/100x100?text=IMAGE+PLACEHOLDER" alt="" /></a></li>
+                                <li className="item"> <a href="results-list.html"><img src="https://via.placeholder.com/100x100?text=IMAGE+PLACEHOLDER" alt="" /></a></li>
+                                <li className="item"> <a href="results-list.html"><img src="https://via.placeholder.com/100x100?text=IMAGE+PLACEHOLDER" alt="" /></a></li>
+                              </ul>
+                              <a href="results-list.html" className="basic-link">view all</a>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a href="">Listing</a>
+                    <ul className="dropdown">
+                      <li><a href="results-list.html">List View</a></li>
+                      <li><a href="results-grid.html">Grid View</a></li>
+                      <li><a href="vehicle-details.html">Vehicle Details</a></li>
+                      <li><a href="add-listing-form.html">Add new listing</a></li>
+                      <li><a href="vehicle-comparision.html">Vehicle Comparision</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="">Users</a>
+                    <ul className="dropdown">
+                      <li><a href="dealer-prosite.html">Dealer Prosite</a></li>
+                      <li><a href="user-dashboard.html">User Dashboard</a></li>
+                      <li><a href="user-dashboard-saved-searches.html">Manage Saved Searches</a></li>
+                      <li><a href="user-dashboard-saved-cars.html">Manage Saved Cars</a></li>
+                      <li><a href="user-dashboard-manage-ads.html">Manage Ads</a></li>
+                      <li><a href="user-dashboard-profile.html">User Profile</a></li>
+                      <li><a href="user-dashboard-settings.html">User Settings</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="">Gallery</a>
+                    <ul className="dropdown">
+                      <li><a href="gallery-2cols.html">Gallery 2 Columns</a></li>
+                      <li><a href="gallery-3cols.html">Gallery 3 Columns</a></li>
+                      <li><a href="gallery-4cols.html">Gallery 4 Columns</a></li>
+                      <li><a href="gallery-2cols-details.html">Gallery 2 Columns with Details</a></li>
+                      <li><a href="gallery-3cols-details.html">Gallery 3 Columns with Details</a></li>
+                      <li><a href="gallery-4cols-details.html">Gallery 4 Columns with Details</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="">Blog</a>
+                    <ul className="dropdown">
+                      <li><a href="blog.html">Blog List</a></li>
+                      <li><a href="blog-masonry.html">Blog Masonry</a></li>
+                      <li><a href="single-post.html">Single Post</a></li>
+                      <li><a href="single-post-review.html">Single Review Post</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
 
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
-
-const IndexPage = () => (
-  <Layout>
-    <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/example.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      />
-      <h1>
-        Welcome to <b>Gatsby!</b>
-      </h1>
-      <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
-        {samplePageLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
-            {i !== samplePageLinks.length - 1 && <> · </>}
-          </React.Fragment>
-        ))}
-        <br />
-        Edit <code>src/pages/index.js</code> to update this page.
-      </p>
-    </div>
-    <ul className={styles.list}>
-      {links.map(link => (
-        <li key={link.url} className={styles.listItem}>
-          <a
-            className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
-          >
-            {link.text} ↗
-          </a>
-          <p className={styles.listItemDescription}>{link.description}</p>
-        </li>
-      ))}
-    </ul>
-    {moreLinks.map((link, i) => (
-      <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-        {i !== moreLinks.length - 1 && <> · </>}
-      </React.Fragment>
-    ))}
-  </Layout>
-)
-
-/**
- * Head export to define metadata for the page
- *
- * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
- */
-export const Head = () => <Seo title="Home" />
+              <div className="search-form">
+                <div className="search-form-inner">
+                  <form>
+                    <h3>Find a Car with our Quick Search</h3>
+                    <div className="row">
+                      <div className="col-lg-6 col-md-6 col-sm-6">
+                        <div className="row">
+                          <div className="col-md-6">
+                            <label>Postcode</label>
+                            <input type="text" className="form-control" />
+                          </div>
+                          <div className="col-md-6">
+                            <label>Body Type</label>
+                            <select name="Body Type" className="form-control selectpicker">
+                              <option selected>Any</option>
+                              <option>Wagon</option>
+                              <option>Minivan</option>
+                              <option>Coupe</option>
+                              <option>Crossover</option>
+                              <option>Van</option>
+                              <option>SUV</option>
+                              <option>Minicar</option>
+                              <option>Sedan</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div className="row">
+                          <div className="col-lg-6 col-md-6 col-sm-6">
+                            <label>Make</label>
+                            <select name="Make" className="form-control selectpicker">
+                              <option selected>Any</option>
+                              <option>Jaguar</option>
+                              <option>BMW</option>
+                              <option>Mercedes</option>
+                              <option>Porsche</option>
+                              <option>Nissan</option>
+                              <option>Mazda</option>
+                              <option>Acura</option>
+                              <option>Audi</option>
+                              <option>Bugatti</option>
+                            </select>
+                          </div>
+                          <div className="col-lg-6 col-md-6 col-sm-6">
+                            <label>Model</label>
+                            <select name="Model" className="form-control selectpicker">
+                              <option selected>Any</option>
+                              <option>GTX</option>
+                              <option>GTR</option>
+                              <option>GTS</option>
+                              <option>RLX</option>
+                              <option>M6</option>
+                              <option>S Class</option>
+                              <option>C Class</option>
+                              <option>B Class</option>
+                              <option>A Class</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div className="row">
+                          <div className="col-lg-6 col-md-6 col-sm-6">
+                            <label>Price Min</label>
+                            <select name="Min Price" className="form-control selectpicker">
+                              <option selected>Any</option>
+                              <option>$10000</option>
+                              <option>$20000</option>
+                              <option>$30000</option>
+                              <option>$40000</option>
+                              <option>$50000</option>
+                              <option>$60000</option>
+                              <option>$70000</option>
+                              <option>$80000</option>
+                              <option>$90000</option>
+                              <option>$100000</option>
+                            </select>
+                          </div>
+                          <div className="col-lg-6 col-md-6 col-sm-6">
+                            <label>Price Max</label>
+                            <select name="Max Price" className="form-control selectpicker">
+                              <option selected>Any</option>
+                              <option>$10000</option>
+                              <option>$20000</option>
+                              <option>$30000</option>
+                              <option>$40000</option>
+                              <option>$50000</option>
+                              <option>$60000</option>
+                              <option>$70000</option>
+                              <option>$80000</option>
+                              <option>$90000</option>
+                              <option>$100000</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div className="row">
+                          <div className="col-12">
+                            <label className="checkbox-inline">
+                              <input type="checkbox" id="inlineCheckbox1" value="option1" /> Brand new only
+                            </label>
+                            <label className="checkbox-inline">
+                              <input type="checkbox" id="inlineCheckbox2" value="option2" /> Certified
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-6 col-md-6 col-sm-6">
+                        <div className="row">
+                          <div className="col-lg-6 col-md-6 col-sm-6">
+                            <label>Min Year</label>
+                            <select name="Min Year" className="form-control selectpicker">
+                              <option selected>Any</option>
+                              <option>2005</option>
+                              <option>2006</option>
+                              <option>2007</option>
+                              <option>2008</option>
+                              <option>2009</option>
+                              <option>2010</option>
+                              <option>2011</option>
+                              <option>2012</option>
+                              <option>2013</option>
+                              <option>2014</option>
+                            </select>
+                          </div>
+                          <div className="col-lg-6 col-md-6 col-sm-6">
+                            <label>Max Year</label>
+                            <select name="Max Year" className="form-control selectpicker">
+                              <option selected>Any</option>
+                              <option>2005</option>
+                              <option>2006</option>
+                              <option>2007</option>
+                              <option>2008</option>
+                              <option>2009</option>
+                              <option>2010</option>
+                              <option>2011</option>
+                              <option>2012</option>
+                              <option>2013</option>
+                              <option>2014</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div className="row">
+                          <div className="col-lg-6 col-md-6 col-sm-6">
+                            <label>Min Mileage</label>
+                            <select name="Min Mileage" className="form-control selectpicker">
+                              <option selected>Any</option>
+                              <option>10000</option>
+                              <option>20000</option>
+                              <option>30000</option>
+                              <option>40000</option>
+                              <option>50000</option>
+                              <option>60000</option>
+                              <option>70000</option>
+                              <option>80000</option>
+                              <option>90000</option>
+                              <option>100000</option>
+                            </select>
+                          </div>
+                          <div className="col-lg-6 col-md-6 col-sm-6">
+                            <label>Max Mileage</label>
+                            <select name="Max Mileage" className="form-control selectpicker">
+                              <option selected>Any</option>
+                              <option>10000</option>
+                              <option>20000</option>
+                              <option>30000</option>
+                              <option>40000</option>
+                              <option>50000</option>
+                              <option>60000</option>
+                              <option>70000</option>
+                              <option>80000</option>
+                              <option>90000</option>
+                              <option>100000</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div className="row">
+                          <div className="col-lg-6 col-md-6 col-sm-6">
+                            <label>Transmission</label>
+                            <select name="Transmission" className="form-control selectpicker">
+                              <option selected>Any</option>
+                              <option>5 Speed Manual</option>
+                              <option>5 Speed Automatic</option>
+                              <option>6 Speed Manual</option>
+                              <option>6 Speed Automatic</option>
+                              <option>7 Speed Manual</option>
+                              <option>7 Speed Automatic</option>
+                              <option>8 Speed Manual</option>
+                              <option>8 Speed Automatic</option>
+                            </select>
+                          </div>
+                          <div className="col-lg-6 col-md-6 col-sm-6">
+                            <label>Body Color</label>
+                            <select name="Body Color" className="form-control selectpicker">
+                              <option selected>Any</option>
+                              <option>Red</option>
+                              <option>Black</option>
+                              <option>White</option>
+                              <option>Yellow</option>
+                              <option>Brown</option>
+                              <option>Grey</option>
+                              <option>Silver</option>
+                              <option>Gold</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div className="row">
+                          <div className="col-12">
+                            <input type="submit" className="btn btn-block btn-info btn-lg" value="Find my vehicle now" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+  )
+}
 
 export default IndexPage
